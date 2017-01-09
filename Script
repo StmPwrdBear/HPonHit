@@ -1,0 +1,12 @@
+/* on chat message */
+  let token = getObj('graphic',<targetid>);
+  let character = getObj('character',token.get('represents'));
+  if(character){
+    let ac = getattrbyname(character.id,'AC');
+    if(ac < <roll> ){
+      let hp = findObjs({ type: 'attribute', name: 'HP', characterid: character.id})[0];
+      if(hp){
+        hp.set('value', (hp.get('value') - <damage>) );
+      }
+    }
+  }
