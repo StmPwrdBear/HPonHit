@@ -1,3 +1,4 @@
+//let not available//
 /* on chat message */
   let token = getObj('graphic',<targetid>);
   let character = getObj('character',token.get('represents'));
